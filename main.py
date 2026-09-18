@@ -8,8 +8,7 @@
 #Importamos las funciones de los otros módulos
 from entrada import ingresar_datos
 from calculos import calcular_intereses, calcular_total, calcular_cuota
-from evaluacion import evaluar_solicitud
-
+from evaluacion import evaluar_prestamo
 
 def main():
     
@@ -38,7 +37,7 @@ def main():
         # -------------------------------
         # 3. Evaluar solicitud
         # -------------------------------
-        resultado = evaluar_solicitud(salario, monto, cuota)
+        aprobado, resultado = evaluar_prestamo(salario, monto, plazo)
         
         
         # --------------------------------
@@ -75,9 +74,9 @@ def main():
         print("Fin de la evaluación.")
         
         
-        # =============================================
-        # Inicio del programa
-        # =============================================
+# =============================================
+# Inicio del programa
+# =============================================
         
-        if _name_ == "_main_":
-            main()
+if __name__ == "__main__":
+    main()
